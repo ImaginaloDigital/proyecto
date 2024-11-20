@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   </head>
 
 <style>
@@ -24,7 +27,18 @@ h2{
   color:aliceblue;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
 </style>
+
+
   <body class="bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <div class="container-fluid">
@@ -53,8 +67,6 @@ h2{
     </nav>
 
     <!---SECTION - BANNERr-->
-
-
     <div class="container mx-auto">
 
         <div class="banner mt-2 bg-no-repeat bg-center bg-cover" style="background-image: url('assets/img/wildrobot.jpg'); height: 200px; background-size: cover; background-position: center;">
@@ -65,88 +77,164 @@ h2{
           <hr style="border: 0; border-top: 2px solid #007bff; width: 80%; margin: 10px auto;">
       </div>
 
-    <div class="row mt-4">
-        <div class="col-3">
-            <div class="card h-100 shadow">
-                <img src="assets/img/myheroe.jpg" class="card-img-top exhibidos w-100" alt="imagen">
-                <!---CODIGO PARA BOTONES DE CADA IMAGEN EN LA CUADRICULA-->
-                <div style="display: flex; justify-content: center; align-items: center;">
-                  <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      45k
-                  </button>
-                  <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      38k
-                  </button>
-                  <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      55k
-                  </button>
+      
+      <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Primer elemento del carrusel -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/myheroe.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">45k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">38k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">55k
+                    </button>
+                  </div>
                 </div>
-            </div>      
-        </div>
-        <div class="col-3">
-            <div class="card h-100 shadow">
-                <img src="assets/img/section2.jpg" class="card-img-top exhibidos w-100" alt="imagen">
-                <!---CODIGO PARA BOTONES E IMAGENES DE CADA IMAGEN EN LA CUADRICULA-->
-                <div style="display: flex; justify-content: center; align-items: center;">
-                  <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      27k
-                  </button>
-                  <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      18k
-                  </button>
-                  <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      22k
-                  </button>
+              </div>
+              <!-- Resto de las imágenes en este carrusel -->
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/section2.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">27k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">18k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">22k
+                    </button>
+                  </div>
                 </div>
+              </div>
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/section5.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">107k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">67k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">100k
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/why.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">70k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">62k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">69k
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="col-3">
-            <div class="card h-100 shadow">
-                <img src="assets/img/section5.jpg" class="card-img-top exhibidos w-100" alt="imagen">
-                <!---CODIGO PARA BOTONES DE CADA IMAGEN EN LA CUADRICULA-->
-                <div style="display: flex; justify-content: center; align-items: center;">
-                  <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      107k
-                  </button>
-                  <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      67k
-                  </button>
-                  <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      100k
-                  </button>
+          </div>
+      
+          <!-- Segundo elemento del carrusel (si quieres más imágenes, puedes añadir más bloques aquí) -->
+          <div class="carousel-item">
+            <div class="row">
+              <!-- Aquí van los mismos bloques de imagen con botones para la siguiente página del carrusel -->
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/temporada-4.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">130k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">95k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">127k
+                    </button>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card h-100 shadow">
-                <img src="assets/img/why.jpg" class="card-img-top exhibidos w-100" alt="imagen">
-                <!---CODIGO PARA BOTONES DE CADA IMAGEN EN LA CUADRICULA-->
-                <div style="display: flex; justify-content: center; align-items: center;">
-                  <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      70k
-                  </button>
-                  <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      62k
-                  </button>
-                  <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
-                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">
-                      69k
-                  </button>
+              </div>
+              <!-- Resto de las imágenes en este carrusel -->
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/superman.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">74k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">53k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">71k
+                    </button>
+                  </div>
                 </div>
+              </div>
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/smile.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">69k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">36k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">67k
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="card h-100 shadow">
+                  <img src="assets/img/venom.jpg" class="card-img-top exhibidos w-100" alt="imagen">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <button type="button" class="btn btn-primary" style="border: none; background: none; font-size:20px; font-weight: bold; color: #007bff; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/3738.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">38k
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #6c757d; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/17402.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">26k
+                    </button>
+                    <button type="button" class="btn btn-success" style="border: none; background: none; font-size: 20px; font-weight: bold; color: #28a745; cursor: pointer; display: flex; align-items: center;">
+                      <img src="assets/img/30571.png" alt="" style="width: 20px; height: 20px; margin-right: 5px;">37k
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
 
     <div class="banner mt-5 bg-no-repeat bg-center bg-cover" style="background-image: url('assets/img/banner1.jpg'); height: 150px; background-size: cover; background-position: center;">
     </div>
@@ -177,7 +265,7 @@ h2{
                     <span style="color: #ffcc00; font-size: 20px;">&#9733;</span>
                     <span style="color: #ffcc00; font-size: 20px;">&#9733;</span>
                     <span style="color: #e0e0e0; font-size: 20px;">&#9733;</span>
-                      </div>
+                  </div>
                 </div>
                     <p>"En una sociedad devastada por los efectos de una guerra total, aparece de repente una misteriosa fortaleza gigante que se traga ciudades y personas una tras otra. Y frente a Izuku y los demás, un hombre que parece el "símbolo de la paz" se para frente a ellos… "</p>
                     <p><strong>Likes:</strong> 2,597 <strong>Comments:</strong> 17</p>
@@ -205,12 +293,12 @@ h2{
                           <span style="color: #ffcc00; font-size: 20px;">&#9733;</span>
                           <span style="color: #e0e0e0; font-size: 20px;">&#9733;</span>
                       </div>
-                    <p>"no fucking way hugh grant just compared jesus to jar jar binks"</p>
-                    <p><strong>Likes:</strong> 7,370 <strong>Comments:</strong> 45</p>
+                      <p>"no fucking way hugh grant just compared jesus to jar jar binks"</p>
+                      <p><strong>Likes:</strong> 7,370 <strong>Comments:</strong> 45</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
               <div class="list-group-item">
                 <div class="d-flex">
                   <img src="assets/img/temporada-4.jpg" alt="section5" class="img-thumbnail me-3" style="width: 200px; height: 300px">
@@ -231,13 +319,14 @@ h2{
                           <span style="color: #ffcc00; font-size: 20px;">&#9733;</span>
                           <span style="color: #e0e0e0; font-size: 20px;">&#9733;</span>
                       </div>
-                    <p>"We were gonna make so many things together. We were going to put out art that would matter to people and affect their lives. We were going to do it together."</p>
-                    <p><strong>Likes:</strong> Not specified <strong>Comments:</strong> Not specified</p>
+                      <p>"We were gonna make so many things together. We were going to put out art that would matter to people and affect their lives. We were going to do it together."</p>
+                      <p><strong>Likes:</strong> Not specified <strong>Comments:</strong> Not specified</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          
+          </div>  
 
           <!---CODIGO PARA VISUALIZARCOMENTARIOS Y COMENTARISTAS-->
           <div class="col-md-4">
@@ -279,9 +368,8 @@ h2{
               </div>
             </div>
           </div>
-
+          <br>
           <!---CODIGO PARA VISUALIZAR PELICULAS EN FORMA DE CUADRICULA-->
-          <div class="col-md-4">
             <h2>Listas Populares</h2>
             <hr style="border: 0; border-top: 2px solid #007bff; width: 80%; margin-left: 0;">
             <div class="list-group">
@@ -335,13 +423,7 @@ h2{
                 </div>
               </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-</div>
-
-   
 
 <footer class="bg-secondary text-white py-4 mt-4">
     <div class="container">
